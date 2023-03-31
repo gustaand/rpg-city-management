@@ -11,3 +11,39 @@
     opacity: 1;
   }
 }
+
+.bg-image {
+  background-image: url('../../assets/bg-images/shattered-dark.png');
+}
+
+
+.card-bg {
+  background-image: url('../../assets/bg-images/cartographer.png');
+  background: radial-gradient(circle, rgba(251, 63, 63, 1) 0%, rgba(70, 86, 252, 1) 100%);
+}
+
+.card-bg-build {
+  background-image: url('../../assets/bg-images/brick-wall.png');
+  background: radial-gradient(circle, rgba(224, 224, 224, 1) 22%, rgba(96, 96, 96, 1) 86%);
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(0deg, rgba(89, 25, 25, 1) 0%, rgba(243, 190, 75, 1) 100%, rgba(231, 242, 93, 1) 100%);
+}
+
+.bg-silver-gradient {
+  background: linear-gradient(0deg, rgba(89, 25, 25, 1) 0%, rgba(75, 236, 243, 1) 100%, rgba(255, 255, 255, 1) 100%);
+}
+
+.bg-silver-gradient:hover {
+  background: linear-gradient(0deg, rgba(79, 21, 21, 1) 0%, rgba(75, 208, 243, 1) 100%, rgba(255, 255, 255, 1) 100%);
+}
+
+.button-add {
+  padding: 10px 5px;
+  user-select: none;
+}
+
+.border-ridge {
+  border: 10px ridge;
+}

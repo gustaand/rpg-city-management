@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { GiTwoCoins } from 'react-icons/gi'
 
 const Coins = () => {
 
@@ -38,7 +39,7 @@ const Coins = () => {
   }
 
   return (
-    <div>
+    <div className='flex flex-col items-center'>
 
       {!change ? (
         <form onSubmit={handleSubmit}>
@@ -51,8 +52,15 @@ const Coins = () => {
 
       ) : (
 
-        <div className='block border-2'>
-          <div>{coins} $</div>
+        <div >
+          <div
+            className='flex justify-center m-1 font-bold text-2xl border-solid border-2 rounded-lg p-3 border-orange-500 bg-slate-500 bg-gold-gradient'
+          >{coins}
+            <span className='text-amber-400 m-1'>
+              <GiTwoCoins />
+            </span>
+          </div>
+
           <div>
             {/* {!changeCoins &&
 
@@ -61,20 +69,34 @@ const Coins = () => {
               <div>
                 <form onSubmit={handleCoins}>
                   <input
+                    className='bg-transparent border-b-2 border-gray-700  focus:outline-none text-dec w-20'
                     type="number"
                     onChange={(e) => setCoinsOperation(parseInt(e.target.value))}
                   />
-                  <input type="submit" value={addCoins ? '+' : '-'} />
+                  <input
+                    className={
+                      addCoins ? 'bg-green-900 px-5 text-center rounded-md font-bold text-2xl text-white m-2 hover:bg-green-800 duration-150'
+                        : 'bg-blue-900 px-5 text-center rounded-md font-bold text-2xl text-white m-2 hover:bg-blue-800 duration-150'
+                    }
+                    type="submit" value={addCoins ? '+' : '-'}
+                  />
                 </form>
               </div>
             }
-            <button
-              onClick={() => { setChangeCoins(true); setAddCoins(true) }}
-            >+</button>
 
-            <button
-              onClick={() => { setChangeCoins(true); setAddCoins(false) }}
-            >-</button>
+            <div className='flex justify-between p-2'>
+
+              <button
+                className='bg-blue-900 px-5 text-center rounded-md font-bold text-2xl text-white m-2 hover:bg-blue-800 duration-150'
+                onClick={() => { setChangeCoins(true); setAddCoins(false) }}
+              >-</button>
+
+              <button
+                className='bg-green-900 px-5 text-center rounded-md font-bold text-2xl text-white m-2 hover:bg-green-800 duration-150'
+                onClick={() => { setChangeCoins(true); setAddCoins(true) }}
+              >+</button>
+
+            </div>
           </div>
 
         </div>

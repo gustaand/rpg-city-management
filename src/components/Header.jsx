@@ -1,20 +1,23 @@
 import Coins from "./head/Coins"
-import CityLevel from "./head/CityLevel"
-import Discount from "./head/Discount"
+// import CityLevel from "./head/CityLevel"
+// import Discount from "./head/Discount"
+import logoText from '../assets/bg-images/logo-text.png'
 
 const Header = () => {
   return (
     <div className='pb-8'>
 
-      <div className="flex justify-center flex-col items-center pb-12">
-        <h1 className="text-center text-5xl">Tales of arret</h1>
-        <h2 className="text-center text-xl">City Management</h2>
+      <div className="flex justify-center flex-col items-center pb-12 box-border">
+        <img
+          className="p-2 box-border max-w-xs sm:max-w-lg"
+          src={logoText} alt="logo text"
+        />
       </div>
 
-      <div className="flex justify-between m-2">
+      <div className="flex justify-between sm:justify-around m-2 flex-wrap">
+        {/* <CityLevel /> */}
         <Coins />
-        <CityLevel />
-        <Discount />
+        {/* <Discount /> */}
       </div>
     </div>
   )

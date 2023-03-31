@@ -1,4 +1,5 @@
 import React from 'react'
+import './animations.css'
 
 const Troops = ({ tropas, setTroop, deleteTroop, setAddTroop, setIsEdit }) => {
 
@@ -16,7 +17,7 @@ const Troops = ({ tropas, setTroop, deleteTroop, setAddTroop, setIsEdit }) => {
   }
 
   return (
-    <div className='m-3 shadow-md px-5 py-10 rounded-xl max-w-md'>
+    <div className='flex flex-col justify-center items-center my-4 mx-1 sm:m-4 shadow-md bg-image bg-slate-200 px-5 py-10 rounded-xl max-w-xs box-border'>
       <div>
         <img className='h-32 w-32' src={tropas.image} />
       </div>
@@ -35,17 +36,15 @@ const Troops = ({ tropas, setTroop, deleteTroop, setAddTroop, setIsEdit }) => {
       </p>
 
       <div className='flex justify-between mt-10'>
-        <button
-          type='button'
-          className='py-2 px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase rounded-lg'
+        <div
+          className='py-2 mx-2 px-10 select-none cursor-pointer bg-indigo-800 hover:bg-indigo-900 text-white font-bold duration-150 uppercase rounded-lg'
           onClick={handleEdit}
-        >Edit</button>
+        >Edit</div>
 
-        <button
-          type='button'
-          className='py-2 px-10 bg-red-600 hover:bg-red-700 text-white font-bold uppercase rounded-lg'
+        <div
+          className='py-2 mx-2 px-8 select-none cursor-pointer bg-red-800 hover:bg-red-900 text-white font-bold duration-150 uppercase rounded-lg'
           onClick={handleDelete}
-        >Delete</button>
+        >Delete</div>
       </div>
 
     </div>

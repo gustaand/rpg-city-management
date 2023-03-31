@@ -21,17 +21,15 @@ const TroopsList = () => {
   }
 
   return (
-    <div className='component-transition'>
-      <h2>Troops</h2>
+    <div className='flex flex-col component-transition align-middle items-center'>
 
-      {!addTroop &&
-        <div
-          className='py-2 px-5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase rounded-lg'
-          onClick={() => setAddTroop(true)}
-        >
-          ADD BUILDING
-        </div>
-      }
+      <div
+        className='inline-block bg-green-800 hover:bg-green-700 duration-150 max-w-max text-white
+            px-5 py-2 select-none cursor-pointer button-add rounded-lg text-center my-10 box-border font-bold'
+        onClick={() => setAddTroop(true)}
+      >
+        RECRUIT
+      </div>
 
       {addTroop &&
         <TroopsForm
@@ -45,7 +43,7 @@ const TroopsList = () => {
         />
       }
 
-      <div className='flex flex-wrap justify-center'>
+      <div className='flex flex-wrap justify-evenly box-border'>
         {troops.map((tropas) => (
           <Troops
             key={tropas.id}

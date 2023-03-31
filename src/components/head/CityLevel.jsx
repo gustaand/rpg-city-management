@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react"
+import '../management/animations.css'
+
 
 const CityLevel = () => {
 
@@ -45,16 +47,16 @@ const CityLevel = () => {
 
       ) : (
 
-        <div className='block border-2'>
-          <div className="flex">
+        <div className='flex flex-col items-center justify-center text-center border-2'>
+          <div className="flex text-center items-center">
             city level:
             {!changeLevel &&
-              <div className="px-2">{level}</div>
+              <div className="font-bold p-5">{level}</div>
             }
             {changeLevel &&
               <form onSubmit={levelSubmit}>
                 <input
-                  className="h-10 w-10"
+                  className="font-bold py-5 w-10 text-center bg-transparent "
                   type="number"
                   value={level}
                   onChange={(e) => setLevel(e.target.value)}
