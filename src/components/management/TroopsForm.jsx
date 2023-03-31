@@ -26,6 +26,7 @@ const TroopsForm = ({ troops, setTroops, troop, setTroop, setAddTroop, isEdit, s
       setTroopLevel(troop.troopLevel)
       setTroopUnits(troop.troopUnits)
       setTroopDescription(troop.troopDescription)
+      setImage(troop.imageId)
     }
   }, [troop])
 
@@ -49,7 +50,7 @@ const TroopsForm = ({ troops, setTroops, troop, setTroop, setAddTroop, isEdit, s
   const handleImagePrev = (e) => {
     e.preventDefault()
 
-    if (image > 1) {
+    if (image > 0) {
       setImage(image - 1)
     } else {
       setImage(troopsIcons.length - 1)
@@ -102,7 +103,7 @@ const TroopsForm = ({ troops, setTroops, troop, setTroop, setAddTroop, isEdit, s
       >
         <div>
           <img
-            src={/*isEdit ? troopsIcons[troop.imageId]*/  troopsIcons[image]}
+            src={troopsIcons[image]}
           />
 
           <div
